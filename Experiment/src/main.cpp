@@ -81,16 +81,16 @@ int main(int argc, char * argv[])
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    auto t1 = Texture("/home/chipskein/sources/opengl/OpenGLExperiment/Experiment/resources/textures/container.jpg",true,GL_REPEAT,GL_REPEAT,GL_LINEAR,GL_LINEAR,GL_RGB);    
+    auto t1 = Texture("../Experiment/resources/textures/wall.jpg",true,GL_REPEAT,GL_REPEAT,GL_LINEAR,GL_LINEAR,GL_RGB);    
     unsigned int texture1=t1.texture;
-    auto t2 = Texture("/home/chipskein/sources/opengl/OpenGLExperiment/Experiment/resources/textures/awesomeface.png",true,GL_REPEAT,GL_REPEAT,GL_LINEAR,GL_LINEAR,GL_RGBA);
+    auto t2 = Texture("../Experiment/resources/textures/awesomeface.png",true,GL_REPEAT,GL_REPEAT,GL_LINEAR,GL_LINEAR,GL_RGBA);
     unsigned int texture2=t2.texture;
     
     shaderProgram.use();
     shaderProgram.setInt("texture1", 0);
     shaderProgram.setInt("texture2", 1);
     shaderProgram.setBool("flipX", false);
-    float alphaC=0.2;
+    float alphaC=0.0f;
     
     glm::vec3 cubePositions[] = {
         glm::vec3( 0.0f,  0.0f,  0.0f), 
@@ -113,7 +113,7 @@ int main(int argc, char * argv[])
         cam->deltaTime=deltaTime;
         window.handle_input();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.0f, 0.0f, 25.0f, 0.5f);
         shaderProgram.setFloat("alphaC", alphaC);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture1);
@@ -124,7 +124,7 @@ int main(int argc, char * argv[])
         for (unsigned int i = 0; i < 10; i++)
         {
             float aspect=float(mWidth)/float(mHeight);
-            float angle=20.0f*i;
+            float angle=(float)glfwGetTime()*(i+1);
             float fov=45.0f;
             glm::mat4 model         = glm::mat4(1.0f);
             glm::mat4 view          = glm::mat4(1.0f);
