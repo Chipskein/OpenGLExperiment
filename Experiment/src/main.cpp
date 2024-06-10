@@ -67,8 +67,8 @@ int main(int argc, char * argv[])
     cam->deltaTime=0.0f;
     auto window = Window(mWidth, mHeight,"Experiment");
     glEnable(GL_DEPTH_TEST);    
-    const char* vertexShader = "/home/chipskein/sources/opengl/OpenGLExperiment/Experiment/resources/shaders/rectangle.vert";
-    const char* fragmentShader = "/home/chipskein/sources/opengl/OpenGLExperiment/Experiment/resources/shaders/rectangle.frag";
+    const char* vertexShader = "../Experiment/resources/shaders/rectangle.vert";
+    const char* fragmentShader = "../Experiment/resources/shaders/rectangle.frag";
     auto shaderProgram = Shader(vertexShader,fragmentShader);
     unsigned int VBO, VAO;
     glGenVertexArrays(1, &VAO);
