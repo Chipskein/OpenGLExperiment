@@ -4,6 +4,7 @@
 [submodule "Experiment/libs/glad"]
 	path = Experiment/libs/glad
 	url = https://github.com/Dav1dde/glad
+	branch = c
 [submodule "Experiment/libs/glm"]
 	path = Experiment/libs/glm
 	url = https://github.com/g-truc/glm
