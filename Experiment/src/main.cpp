@@ -10,6 +10,7 @@
 #include <cstdlib>
 
 
+
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 float vertices[] = {
