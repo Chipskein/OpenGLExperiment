@@ -1,0 +1,12 @@
+[submodule "Experiment/libs/glfw"]
+	path = Experiment/libs/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "Experiment/libs/glad"]
+	path = Experiment/libs/glad
+	url = https://github.com/Dav1dde/glad
+[submodule "Experiment/libs/glm"]
+	path = Experiment/libs/glm
+	url = https://github.com/g-truc/glm
+[submodule "Experiment/libs/stb"]
+	path = Experiment/libs/stb
+	url = https://github.com/nothings/stb
