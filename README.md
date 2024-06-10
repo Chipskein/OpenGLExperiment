@@ -1,5 +1,13 @@
 # Experiment
 
+
+
+https://github.com/Chipskein/OpenGLExperiment/assets/47486707/876ba47b-2972-4055-be33-716909b29846
+
+
+
+
+
 ### Description
 Simple Demo for testing OpenGL stuff
 
@@ -11,7 +19,7 @@ Simple Demo for testing OpenGL stuff
 
 ##### Clone repository and static libraries
 
-        git clone $URL --recursive
+        git clone https://github.com/Chipskein/OpenGLExperiment.git --recursive
 
 ##### For updating required libraries( if missing )
     
