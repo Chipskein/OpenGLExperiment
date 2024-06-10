@@ -26,7 +26,7 @@ Simple Demo for testing OpenGL stuff
         git submodule update --init
 
 ##### Cmake
-
+        cd OpenGLExperiment
         mkdir build
         cd build
         cmake ..
